@@ -1,16 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, BookOpen, FlaskConical, Sparkles, User, Bot } from 'lucide-react';
+import { Send, BookOpen, FlaskConical, Sparkles, User, Bot, Settings } from 'lucide-react';
 
 function App() {
     const [messages, setMessages] = useState([
         {
             role: 'assistant',
             content: "Hello! I'm your Treg Research Assistant. I can help you design experiments, find protocols, or research Treg biology. What are you working on today?",
-            sources: []
+            steps: []
         }
     ]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [model, setModel] = useState('pro'); // pro or flash
+    const [showSettings, setShowSettings] = useState(false);
     const messagesEndRef = useRef(null);
 
     const scrollToBottom = () => {
@@ -34,7 +36,10 @@ function App() {
             const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ question: userMessage.content }),
+                body: JSON.stringify({
+                    question: userMessage.content,
+                    model_config: model
+                }),
             });
 
             if (!response.ok) throw new Error('Network response was not ok');
@@ -44,7 +49,7 @@ function App() {
             const botMessage = {
                 role: 'assistant',
                 content: data.answer,
-                sources: data.sources || []
+                steps: data.steps || []
             };
 
             setMessages(prev => [...prev, botMessage]);
@@ -53,7 +58,7 @@ function App() {
             setMessages(prev => [...prev, {
                 role: 'assistant',
                 content: "I'm sorry, I encountered an error connecting to the server. Please ensure the backend is running.",
-                sources: []
+                steps: []
             }]);
         } finally {
             setIsLoading(false);
@@ -82,7 +87,28 @@ function App() {
                 </div>
 
                 <div className="mt-auto pt-4 border-t border-slate-700">
-                    <div className="text-xs text-slate-500">
+                    <button
+                        onClick={() => setShowSettings(!showSettings)}
+                        className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 transition-colors w-full p-2 rounded hover:bg-slate-800"
+                    >
+                        <Settings className="w-4 h-4" />
+                        <span>Settings</span>
+                    </button>
+
+                    {showSettings && (
+                        <div className="mt-2 p-3 bg-slate-800 rounded-lg border border-slate-700 animate-in slide-in-from-bottom-2">
+                            <label className="text-xs text-slate-500 block mb-2">Model Selection</label>
+                            <select
+                                value={model}
+                                onChange={(e) => setModel(e.target.value)}
+                                className="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-slate-300 focus:border-bio-accent outline-none"
+                            >
+                                <option value="pro">Gemini 1.5 Pro (Reasoning)</option>
+                                <option value="flash">Gemini 1.5 Flash (Speed)</option>
+                            </select>
+                        </div>
+                    )}
+                    <div className="text-xs text-slate-500 mt-4">
                         Powered by RAG & LlamaIndex
                     </div>
                 </div>
@@ -109,30 +135,24 @@ function App() {
 
                             <div className={`max-w-[80%] space-y-2 ${msg.role === 'user' ? 'items-end flex flex-col' : ''}`}>
                                 <div className={`p-4 rounded-2xl shadow-sm ${msg.role === 'user'
-                                        ? 'bg-bio-accent/10 text-bio-accent border border-bio-accent/20 rounded-tr-none'
-                                        : 'bg-bio-panel border border-slate-700 rounded-tl-none'
+                                    ? 'bg-bio-accent/10 text-bio-accent border border-bio-accent/20 rounded-tr-none'
+                                    : 'bg-bio-panel border border-slate-700 rounded-tl-none'
                                     }`}>
                                     <p className="leading-relaxed whitespace-pre-wrap">{msg.content}</p>
                                 </div>
 
-                                {/* Sources */}
-                                {msg.sources && msg.sources.length > 0 && (
+                                {/* Steps / Thoughts */}
+                                {msg.steps && msg.steps.length > 0 && (
                                     <div className="bg-slate-900/50 rounded-lg p-3 text-xs border border-slate-800 ml-2 animate-in fade-in slide-in-from-top-2">
                                         <div className="font-semibold text-slate-400 mb-2 flex items-center gap-2">
-                                            <BookOpen className="w-3 h-3" /> Sources
+                                            <Sparkles className="w-3 h-3" /> Reasoning Steps
                                         </div>
                                         <div className="space-y-2">
-                                            {msg.sources.map((source, sIdx) => (
-                                                <a
-                                                    key={sIdx}
-                                                    href={source.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="block p-2 rounded bg-slate-800/50 hover:bg-slate-700 transition-colors border-l-2 border-bio-secondary truncate"
-                                                >
-                                                    <div className="font-medium text-slate-300 truncate">{source.title}</div>
-                                                    <div className="text-slate-500 mt-0.5">{source.source} • {source.id}</div>
-                                                </a>
+                                            {msg.steps.map((step, sIdx) => (
+                                                <div key={sIdx} className="p-2 rounded bg-slate-800/50 border-l-2 border-bio-secondary/50">
+                                                    {/* This depends on the exact format of 'steps' from Vertex AI */}
+                                                    <div className="text-slate-300">{JSON.stringify(step)}</div>
+                                                </div>
                                             ))}
                                         </div>
                                     </div>

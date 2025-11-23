@@ -8,5 +8,6 @@ chromadb
 llama-index-llms-gemini
 llama-index-embeddings-gemini
 google-generativeai
+google-cloud-aiplatform
 python-dotenv
 pandas

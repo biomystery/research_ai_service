@@ -62,3 +62,32 @@ I like your updated design. Few suggestions:
 2. use google vertex ai platform (document: https://docs.cloud.google.com/vertex-ai/docs)
 
 Please update the design based on the above 2 tools
+
+## 6 
+please update the mermaid by removing the not-allowed characters in mermaid (e.g. \( ..) and add this to the rules or memory  if you kept one
+
+## 7 
+
+The design logic is great! We can move forward to implement it. I have some additional requests in the implementation plan, see below:
+
+1. make sure we can change the model to other models if needed. Ideally we can implement a config file to store the model name and other parameters or in interface can allow users to select the model 
+
+2. Please follow the few examples i provided: 
+
+    2.1 https://www.kaggle.com/code/kaggle5daysofai/day-1a-from-prompt-to-action
+    2.2 https://www.kaggle.com/code/kaggle5daysofai/day-1b-agent-architectures
+    2.3 https://www.kaggle.com/code/kaggle5daysofai/day-2a-agent-tools
+    2.4 https://www.kaggle.com/code/kaggle5daysofai/day-2b-agent-tools-best-practices
+    2.5 https://www.kaggle.com/code/kaggle5daysofai/day-3a-agent-sessions
+    2.6 https://www.kaggle.com/code/kaggle5daysofai/day-3b-agent-memory
+    2.7 https://www.kaggle.com/code/kaggle5daysofai/day-4a-agent-observability
+    2.8 https://www.kaggle.com/code/kaggle5daysofai/day-4b-agent-evaluation 
+    2.9 https://www.kaggle.com/code/kaggle5daysofai/day-5a-agent2agent-communication
+    2.10 https://www.kaggle.com/code/kaggle5daysofai/day-5b-agent-deployment
+
+Summarize lessons learned from the above examples into memory or markdown file. Then implement based on the summary.
+
+
+## 8 
+
+Can you put your lessons learned, implementation plan & walkthrough into markdown in docs folder? Or where can i find them?

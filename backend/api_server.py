@@ -1,36 +1,36 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 import uvicorn
 import os
 
-# Import the agent
-# Note: In a real deployment, we'd handle the import more gracefully or use dependency injection
+# Import the Orchestrator
 try:
-    from rag_agent import TregAgent
+    from backend.agents.orchestrator import OrchestratorAgent
 except ImportError:
-    # Mock for environments where llama-index is not installed (like this agent's runner)
-    class TregAgent:
-        def query(self, q):
+    # Mock for environments where dependencies are missing
+    class OrchestratorAgent:
+        def __init__(self): pass
+        def query(self, q, session_id=None):
             return {
-                "answer": "This is a mock response because llama-index is not installed in this environment. Please install dependencies.",
-                "sources": []
+                "answer": "Mock response: Agent dependencies not found.",
+                "steps": []
             }
 
 app = FastAPI(title="Treg Research Assistant API")
 
 class QueryRequest(BaseModel):
     question: str
+    session_id: Optional[str] = "default"
+    model_config: Optional[str] = "pro" # pro or flash
 
-class Source(BaseModel):
-    source: str
-    title: str
-    url: str
-    id: str
+class Step(BaseModel):
+    action: str
+    observation: str
 
 class QueryResponse(BaseModel):
     answer: str
-    sources: List[Source]
+    steps: List[Any]
 
 # Global agent instance
 agent = None
@@ -39,12 +39,11 @@ agent = None
 async def startup_event():
     global agent
     try:
-        agent = TregAgent()
-        print("TregAgent initialized.")
+        # In a real app, we might instantiate per request or use a pool
+        agent = OrchestratorAgent()
+        print("OrchestratorAgent initialized.")
     except Exception as e:
         print(f"Failed to initialize agent: {e}")
-        # We don't crash here to allow the server to start even if OpenAI key is missing, 
-        # but requests will fail or return mock data.
 
 @app.post("/chat", response_model=QueryResponse)
 async def chat(request: QueryRequest):
@@ -52,7 +51,9 @@ async def chat(request: QueryRequest):
         raise HTTPException(status_code=503, detail="Agent not initialized")
     
     try:
-        result = agent.query(request.question)
+        # Note: In a real implementation, we'd pass model_config to the agent
+        # to dynamically switch models if supported by the BaseAgent logic.
+        result = agent.query(request.question, session_id=request.session_id)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
