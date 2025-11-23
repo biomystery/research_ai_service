@@ -2,15 +2,15 @@ import os
 import json
 from typing import List
 from llama_index.core import Document, VectorStoreIndex, Settings
-from llama_index.llms.openai import OpenAI
-from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.llms.gemini import Gemini
+from llama_index.embeddings.gemini import GeminiEmbedding
 
 # Configuration
 DATA_PATH = "backend/data/raw_data.json"
 PERSIST_DIR = "backend/storage"
 
-# Ensure OpenAI API key is set
-# os.environ["OPENAI_API_KEY"] = "sk-..." 
+# Ensure GOOGLE_API_KEY is set
+# os.environ["GOOGLE_API_KEY"] = "AIza..."
 
 def load_documents() -> List[Document]:
     """Loads data from the raw JSON file and converts to LlamaIndex Documents."""
@@ -42,11 +42,10 @@ def load_documents() -> List[Document]:
 def initialize_index(force_rebuild: bool = False):
     """Creates or loads the vector index."""
     
-    # Use OpenAI for high quality embeddings and generation
-    # In a real scenario, we might use local models if privacy is a concern, 
-    # but for this capstone, OpenAI is standard and effective.
-    Settings.llm = OpenAI(model="gpt-4o-mini")
-    Settings.embed_model = OpenAIEmbedding()
+    # Use Google Gemini for embeddings and generation
+    # model_name defaults to "models/gemini-1.5-flash" or similar, check docs for latest
+    Settings.llm = Gemini(model="models/gemini-1.5-flash")
+    Settings.embed_model = GeminiEmbedding(model_name="models/embedding-001")
 
     if os.path.exists(PERSIST_DIR) and not force_rebuild:
         print("Loading index from storage...")
