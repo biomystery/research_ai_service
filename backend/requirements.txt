@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+biopython
+llama-index
+llama-index-vector-stores-chroma
+chromadb
+openai
+python-dotenv
+pandas
