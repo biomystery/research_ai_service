@@ -18,6 +18,11 @@ class Config:
     
     # Vertex AI Search
     DATA_STORE_ID = os.getenv("DATA_STORE_ID", "treg-data-store")
+
+    # External APIs
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+    EMAIL = os.getenv("EMAIL", "your.email@example.com")
+    RETMAX = int(os.getenv("RETMAX", "20"))
     
     @staticmethod
     def get_model_config(agent_type: str):

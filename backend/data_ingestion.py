@@ -7,8 +7,7 @@ import xml.etree.ElementTree as ET
 from typing import List, Dict
 
 # Configuration
-EMAIL = "your.email@example.com"  # Required for Entrez
-RETMAX = 20
+from config import Config
 
 def fetch_url_content(url: str) -> bytes:
     """Helper to fetch URL content using urllib."""
@@ -19,7 +18,7 @@ def fetch_url_content(url: str) -> bytes:
         print(f"Error fetching {url}: {e}")
         return None
 
-def fetch_pubmed_abstracts(query: str, max_results: int = RETMAX) -> List[Dict]:
+def fetch_pubmed_abstracts(query: str, max_results: int = Config.RETMAX) -> List[Dict]:
     """
     Fetches abstracts from PubMed using the E-utilities API (via urllib).
     """
@@ -32,7 +31,7 @@ def fetch_pubmed_abstracts(query: str, max_results: int = RETMAX) -> List[Dict]:
         "term": query,
         "retmode": "json",
         "retmax": max_results,
-        "email": EMAIL
+        "email": Config.EMAIL
     })
     search_url = f"{base_url}/esearch.fcgi?{params}"
     
@@ -57,7 +56,7 @@ def fetch_pubmed_abstracts(query: str, max_results: int = RETMAX) -> List[Dict]:
         "db": "pubmed",
         "id": ids_str,
         "retmode": "xml",
-        "email": EMAIL
+        "email": Config.EMAIL
     })
     fetch_url = f"{base_url}/efetch.fcgi?{params}"
     
@@ -83,12 +82,48 @@ def fetch_pubmed_abstracts(query: str, max_results: int = RETMAX) -> List[Dict]:
             pmid_elem = article.find(".//PMID")
             pmid = pmid_elem.text if pmid_elem is not None else "Unknown"
             
+            # Extract Journal
+            journal_elem = article.find(".//Journal/Title")
+            journal = journal_elem.text if journal_elem is not None else "Unknown Journal"
+
+            # Extract Publication Date
+            pub_date_elem = article.find(".//PubDate")
+            pub_date = "Unknown Date"
+            if pub_date_elem is not None:
+                year = pub_date_elem.find("Year")
+                medline_date = pub_date_elem.find("MedlineDate")
+                if year is not None:
+                    pub_date = year.text
+                    month = pub_date_elem.find("Month")
+                    day = pub_date_elem.find("Day")
+                    if month is not None:
+                        pub_date += f"-{month.text}"
+                    if day is not None:
+                        pub_date += f"-{day.text}"
+                elif medline_date is not None:
+                    pub_date = medline_date.text
+
+            # Extract Authors
+            authors = []
+            author_list = article.findall(".//AuthorList/Author")
+            for author in author_list:
+                last_name = author.find("LastName")
+                fore_name = author.find("ForeName")
+                if last_name is not None:
+                    name = last_name.text
+                    if fore_name is not None:
+                        name = f"{fore_name.text} {name}"
+                    authors.append(name)
+            
             articles.append({
                 "source": "PubMed",
                 "id": pmid,
                 "title": title,
                 "content": abstract,
-                "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+                "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                "journal": journal,
+                "publication_date": pub_date,
+                "authors": authors
             })
         except Exception:
             continue
@@ -96,7 +131,7 @@ def fetch_pubmed_abstracts(query: str, max_results: int = RETMAX) -> List[Dict]:
     print(f"Fetched {len(articles)} articles from PubMed.")
     return articles
 
-def fetch_clinical_trials(query: str, max_results: int = RETMAX) -> List[Dict]:
+def fetch_clinical_trials(query: str, max_results: int = Config.RETMAX) -> List[Dict]:
     """
     Fetches clinical trials from ClinicalTrials.gov API v2 (via urllib).
     """

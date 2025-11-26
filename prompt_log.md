@@ -91,3 +91,8 @@ Summarize lessons learned from the above examples into memory or markdown file. 
 ## 8 
 
 Can you put your lessons learned, implementation plan & walkthrough into markdown in docs folder? Or where can i find them?
+
+## 9 (Fast mode)
+
+- 1. put the env variable to a config file & enable python script to load them from the config file : `GOOGLE_API_KEY`,`EMAIL`, `RETMAX`
+- 2. add these entries in the `fetch_pubmed_abstracts`'s return json: 1) published datetime 2) author lists  3) Journal name 
