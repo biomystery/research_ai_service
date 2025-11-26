@@ -1,6 +1,4 @@
 import json
-import os
-from typing import List, Dict
 from backend.data_ingestion import fetch_pubmed_abstracts, fetch_clinical_trials
 
 def search_pubmed(query: str) -> str:
