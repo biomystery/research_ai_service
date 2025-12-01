@@ -8,6 +8,10 @@ This agent assists bioinformaticians by:
 - Finding clinical trials from ClinicalTrials.gov.
 - Answering questions about experiment design (e.g., flow cytometry panels, cytokine cocktails).
 
+## Demo 
+![output](https://github.com/user-attachments/assets/8c659055-1868-4dbf-b6cb-4a9f6684473d)
+
+
 ## Quick Start
 
 ### Backend
