@@ -13,7 +13,7 @@ This agent assists bioinformaticians by:
 ### Backend
 1.  `cd backend`
 2.  `pip install -r requirements.txt`
-3.  `export GOOGLE_API_KEY="your-key"`
+3.  `export GOOGLE_API_KEY="your-key"` or edit `.env` on root directory
 4.  `python data_ingestion.py` (Fetch data)
 5.  `python api_server.py` (Start server)
 
@@ -23,6 +23,8 @@ This agent assists bioinformaticians by:
 3.  `npm run dev`
 
 ## Tech Stack
+see details on [design_logic.md](design_logic.md)
+
 - **Backend**: Python, FastAPI, LlamaIndex, ChromaDB.
 - **AI Engine**: Google Gemini (via `llama-index-llms-gemini`).
 - **Frontend**: React, Vite, TailwindCSS.
