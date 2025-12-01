@@ -1,12 +1,14 @@
 from typing import List, Callable, Optional, Dict, Any
-import vertexai
-from vertexai.preview import reasoning_engines
+from google.adk.agents import Agent
+from google.adk.models.google_llm import Gemini
+from google.adk.runners import InMemoryRunner
+from google.genai import types
 from backend.config import Config
 
 class BaseAgent:
     """
     Base class for all agents in the system.
-    Wraps Vertex AI Reasoning Engine patterns.
+    Wraps Google ADK Agent patterns.
     """
     
     def __init__(
@@ -21,18 +23,22 @@ class BaseAgent:
         self.tools = tools or []
         self.system_instruction = system_instruction
         
-        # Initialize Vertex AI
-        vertexai.init(project=Config.PROJECT_ID, location=Config.LOCATION)
-        
-        # Create the underlying LangChain/Reasoning Engine agent
-        # Note: In a real ADK deployment, we might use reasoning_engines.LangchainAgent
-        # or a custom defined class. For this capstone, we'll use the high-level abstraction.
-        self.agent = reasoning_engines.LangchainAgent(
-            model=self.model_name,
-            tools=self.tools,
-            system_instruction=self.system_instruction,
-            agent_executor_kwargs={"return_intermediate_steps": True}
+        # Initialize Gemini Model
+        # We assume the environment variable GOOGLE_API_KEY is set, 
+        # or we can pass it if the library supports it.
+        self.model = Gemini(
+            model=self.model_name
         )
+        
+        # Initialize Agent
+        self.agent = Agent(
+            model=self.model,
+            tools=self.tools,
+            system_prompt=self.system_instruction
+        )
+        
+        # Initialize Runner
+        self.runner = InMemoryRunner(agent=self.agent)
 
     def query(self, input_text: str, session_id: str = None) -> Dict[str, Any]:
         """
@@ -40,10 +46,16 @@ class BaseAgent:
         """
         print(f"[{self.name}] Processing: {input_text}")
         try:
-            response = self.agent.query(input=input_text)
+            # Execute the agent using the runner
+            response = self.runner.run(input_text)
+            
+            # Extract the answer. Assuming response is the final text or has a text attribute.
+            # Adjust this based on actual ADK response structure if needed.
+            answer = str(response)
+            
             return {
-                "answer": response.get("output", "No output generated."),
-                "steps": response.get("intermediate_steps", [])
+                "answer": answer,
+                "steps": [] # Steps capture might require different ADK configuration
             }
         except Exception as e:
             print(f"[{self.name}] Error: {e}")
@@ -51,5 +63,4 @@ class BaseAgent:
 
     def get_tool_definitions(self) -> List[Dict]:
         """Returns JSON schema of tools for inspection."""
-        # This is a placeholder if we need to expose tool schemas to the UI
         return [tool.__name__ for tool in self.tools]

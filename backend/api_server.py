@@ -7,7 +7,10 @@ import os
 # Import the Orchestrator
 try:
     from backend.agents.orchestrator import OrchestratorAgent
-except ImportError:
+except ImportError as e:
+    import traceback
+    traceback.print_exc()
+    print(f"ImportError details: {e}")
     # Mock for environments where dependencies are missing
     class OrchestratorAgent:
         def __init__(self): pass
@@ -22,7 +25,7 @@ app = FastAPI(title="Treg Research Assistant API")
 class QueryRequest(BaseModel):
     question: str
     session_id: Optional[str] = "default"
-    model_config: Optional[str] = "pro" # pro or flash
+    model_type: Optional[str] = "pro" # pro or flash
 
 class Step(BaseModel):
     action: str
@@ -61,6 +64,10 @@ async def chat(request: QueryRequest):
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+@app.get("/")
+async def root():
+    return {"message": "Treg Research Assistant API is running", "docs_url": "/docs"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
