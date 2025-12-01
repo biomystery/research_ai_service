@@ -7,6 +7,10 @@ import xml.etree.ElementTree as ET
 from typing import List, Dict
 
 # Configuration
+import sys
+import os
+# Add parent directory to path to allow imports when running as script
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from backend.config import Config
 
 def fetch_url_content(url: str) -> bytes:

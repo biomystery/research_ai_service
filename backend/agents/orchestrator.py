@@ -19,7 +19,7 @@ class OrchestratorAgent(BaseAgent):
             Delegates a research question to the Researcher Agent.
             Use this when you need to find scientific facts, papers, or clinical trials.
             """
-            result = self.researcher.query(question)
+            result = self.researcher.query_sync(question)
             return result["answer"]
 
         def ask_analyst(task: str) -> str:
@@ -27,7 +27,7 @@ class OrchestratorAgent(BaseAgent):
             Delegates a data analysis or calculation task to the Analyst Agent.
             Use this when you need to calculate stats, plot data, or run code.
             """
-            result = self.analyst.query(task)
+            result = self.analyst.query_sync(task)
             return result["answer"]
             
         super().__init__(

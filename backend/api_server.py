@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
+from contextlib import asynccontextmanager
 import uvicorn
 import os
 
@@ -20,7 +21,24 @@ except ImportError as e:
                 "steps": []
             }
 
-app = FastAPI(title="Treg Research Assistant API")
+# Global agent instance
+agent = None
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
+    global agent
+    try:
+        # In a real app, we might instantiate per request or use a pool
+        agent = OrchestratorAgent()
+        print("OrchestratorAgent initialized.")
+    except Exception as e:
+        print(f"Failed to initialize agent: {e}")
+    yield
+    # Shutdown (if needed)
+    # Cleanup code can go here
+
+app = FastAPI(title="Treg Research Assistant API", lifespan=lifespan)
 
 class QueryRequest(BaseModel):
     question: str
@@ -35,19 +53,6 @@ class QueryResponse(BaseModel):
     answer: str
     steps: List[Any]
 
-# Global agent instance
-agent = None
-
-@app.on_event("startup")
-async def startup_event():
-    global agent
-    try:
-        # In a real app, we might instantiate per request or use a pool
-        agent = OrchestratorAgent()
-        print("OrchestratorAgent initialized.")
-    except Exception as e:
-        print(f"Failed to initialize agent: {e}")
-
 @app.post("/chat", response_model=QueryResponse)
 async def chat(request: QueryRequest):
     if not agent:
@@ -56,7 +61,7 @@ async def chat(request: QueryRequest):
     try:
         # Note: In a real implementation, we'd pass model_config to the agent
         # to dynamically switch models if supported by the BaseAgent logic.
-        result = agent.query(request.question, session_id=request.session_id)
+        result = await agent.query(request.question, session_id=request.session_id)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

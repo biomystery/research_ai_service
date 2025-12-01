@@ -1,13 +1,15 @@
 from typing import List, Callable, Optional, Dict, Any
-import google.generativeai as genai
+from google.adk import Agent as ADKAgent
+from google.adk.runners import InMemoryRunner
 from backend.config import Config
-import inspect
-import json
+import os
+import asyncio
+import concurrent.futures
 
 class BaseAgent:
     """
     Base class for all agents in the system.
-    Uses Google Generative AI SDK with function calling support.
+    Uses Google ADK (Agent Development Kit) for automatic function calling.
     """
     
     def __init__(
@@ -20,161 +22,39 @@ class BaseAgent:
         self.name = name
         self.model_name = model_name
         self.tools = tools or []
-        self.system_instruction = system_instruction
+        self.system_instruction = system_instruction or ""
         
-        # Configure Gemini API
-        genai.configure(api_key=Config.GOOGLE_API_KEY)
+        # Set Google API key for ADK
+        if Config.GOOGLE_API_KEY:
+            os.environ["GOOGLE_API_KEY"] = Config.GOOGLE_API_KEY
         
-        # Initialize the model
-        generation_config = {
-            "temperature": 0.7,
-            "top_p": 0.95,
-            "top_k": 40,
-            "max_output_tokens": 8192,
-        }
-        
-        # Convert tools to Gemini function declarations
-        tool_declarations = []
-        self.tool_map = {}  # Map function names to actual functions
-        
-        if self.tools:
-            for tool in self.tools:
-                declaration = self._convert_tool_to_declaration(tool)
-                tool_declarations.append(declaration)
-                self.tool_map[tool.__name__] = tool
-        
-        # Initialize model with tools if available
-        if tool_declarations:
-            self.model = genai.GenerativeModel(
-                model_name=self.model_name,
-                generation_config=generation_config,
-                system_instruction=self.system_instruction,
-                tools=tool_declarations
-            )
-        else:
-            self.model = genai.GenerativeModel(
-                model_name=self.model_name,
-                generation_config=generation_config,
-                system_instruction=self.system_instruction
-            )
-        
-        # Start a chat session
-        self.chat = self.model.start_chat(history=[])
-
-    def _convert_tool_to_declaration(self, tool: Callable) -> genai.protos.Tool:
-        """Convert a Python function to a Gemini tool declaration."""
-        sig = inspect.signature(tool)
-        parameters = {}
-        required = []
-        
-        for param_name, param in sig.parameters.items():
-            param_type = "string"  # Default to string
-            if param.annotation != inspect.Parameter.empty:
-                if param.annotation == int:
-                    param_type = "integer"
-                elif param.annotation == float:
-                    param_type = "number"
-                elif param.annotation == bool:
-                    param_type = "boolean"
-            
-            parameters[param_name] = {
-                "type": param_type,
-                "description": f"Parameter {param_name}"
-            }
-            
-            if param.default == inspect.Parameter.empty:
-                required.append(param_name)
-        
-        function_declaration = genai.protos.FunctionDeclaration(
-            name=tool.__name__,
-            description=tool.__doc__ or f"Function {tool.__name__}",
-            parameters=genai.protos.Schema(
-                type=genai.protos.Type.OBJECT,
-                properties={
-                    name: genai.protos.Schema(type=self._get_gemini_type(prop["type"]))
-                    for name, prop in parameters.items()
-                },
-                required=required
-            )
+        # Initialize ADK Agent
+        # ADK handles function calling automatically
+        self.agent = ADKAgent(
+            model=model_name,
+            name=name,
+            description=f"{name} agent",
+            instruction=self.system_instruction,
+            tools=self.tools
         )
         
-        return genai.protos.Tool(function_declarations=[function_declaration])
+        # Create runner for executing queries
+        self.runner = InMemoryRunner(agent=self.agent)
+        # Thread pool for running async code from sync contexts (e.g., tools)
+        self._executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)
 
-    def _get_gemini_type(self, type_str: str):
-        """Convert string type to Gemini Type enum."""
-        type_mapping = {
-            "string": genai.protos.Type.STRING,
-            "integer": genai.protos.Type.INTEGER,
-            "number": genai.protos.Type.NUMBER,
-            "boolean": genai.protos.Type.BOOLEAN,
-            "object": genai.protos.Type.OBJECT,
-            "array": genai.protos.Type.ARRAY
-        }
-        return type_mapping.get(type_str, genai.protos.Type.STRING)
-
-    def query(self, input_text: str, session_id: str = None) -> Dict[str, Any]:
+    async def query(self, input_text: str, session_id: str = None) -> Dict[str, Any]:
         """
         Executes a query against the agent with automatic function calling.
+        ADK handles function calling automatically via the Runner.
+        This is the async version - use this from async contexts (e.g., FastAPI).
         """
         print(f"[{self.name}] Processing: {input_text}")
         try:
-            response = self.chat.send_message(input_text)
-            
-            # Handle function calls iteratively
-            max_iterations = 5
-            iteration = 0
-            
-            while iteration < max_iterations:
-                # Check if the model wants to call a function
-                if response.candidates[0].content.parts:
-                    part = response.candidates[0].content.parts[0]
-                    
-                    if hasattr(part, 'function_call') and part.function_call:
-                        function_call = part.function_call
-                        function_name = function_call.name
-                        function_args = dict(function_call.args)
-                        
-                        print(f"[{self.name}] Calling function: {function_name} with args: {function_args}")
-                        
-                        # Execute the function
-                        if function_name in self.tool_map:
-                            function_result = self.tool_map[function_name](**function_args)
-                            
-                            # Send the function result back to the model
-                            response = self.chat.send_message(
-                                genai.protos.Content(
-                                    parts=[genai.protos.Part(
-                                        function_response=genai.protos.FunctionResponse(
-                                            name=function_name,
-                                            response={"result": function_result}
-                                        )
-                                    )]
-                                )
-                            )
-                            iteration += 1
-                        else:
-                            print(f"[{self.name}] Warning: Function {function_name} not found")
-                            break
-                    else:
-                        # No more function calls, we have the final answer
-                        break
-                else:
-                    break
-            
-            # Extract the final text answer - check if text is available
-            try:
-                answer = response.text
-            except ValueError:
-                # If response.text fails, try to get text from parts
-                answer = "I processed your request but couldn't generate a final response."
-                if response.candidates[0].content.parts:
-                    for part in response.candidates[0].content.parts:
-                        if hasattr(part, 'text') and part.text:
-                            answer = part.text
-                            break
+            response_text = await self._run_query(input_text)
             
             return {
-                "answer": answer,
+                "answer": response_text,
                 "steps": []
             }
         except Exception as e:
@@ -182,6 +62,48 @@ class BaseAgent:
             import traceback
             traceback.print_exc()
             return {"answer": f"Error processing request: {str(e)}", "steps": []}
+    
+    def query_sync(self, input_text: str, session_id: str = None) -> Dict[str, Any]:
+        """
+        Synchronous wrapper for query(). Use this from synchronous contexts (e.g., tools).
+        Runs the async query in a thread pool to avoid event loop conflicts.
+        """
+        print(f"[{self.name}] Processing (sync): {input_text}")
+        try:
+            # Check if we're in an async context
+            try:
+                loop = asyncio.get_running_loop()
+                # We're in an async context, run in thread pool
+                future = self._executor.submit(asyncio.run, self._run_query(input_text))
+                response_text = future.result()
+            except RuntimeError:
+                # No running loop, safe to use asyncio.run directly
+                response_text = asyncio.run(self._run_query(input_text))
+            
+            return {
+                "answer": response_text,
+                "steps": []
+            }
+        except Exception as e:
+            print(f"[{self.name}] Error: {e}")
+            import traceback
+            traceback.print_exc()
+            return {"answer": f"Error processing request: {str(e)}", "steps": []}
+    
+    async def _run_query(self, input_text: str) -> str:
+        """Internal async method to run the query using ADK Runner."""
+        # run_debug returns a list of events
+        events = await self.runner.run_debug(input_text, quiet=True)
+        
+        response_parts = []
+        for event in events:
+            if event.content and event.content.parts:
+                for part in event.content.parts:
+                    if hasattr(part, 'text') and part.text:
+                        response_parts.append(part.text)
+        
+        # Combine all text parts
+        return "\n".join(response_parts) if response_parts else "No response generated."
 
     def get_tool_definitions(self) -> List[Dict]:
         """Returns JSON schema of tools for inspection."""
