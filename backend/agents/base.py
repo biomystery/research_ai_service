@@ -1,14 +1,11 @@
 from typing import List, Callable, Optional, Dict, Any
-from google.adk.agents import Agent
-from google.adk.models.google_llm import Gemini
-from google.adk.runners import InMemoryRunner
-from google.genai import types
+import google.generativeai as genai
 from backend.config import Config
 
 class BaseAgent:
     """
     Base class for all agents in the system.
-    Wraps Google ADK Agent patterns.
+    Uses Google Generative AI SDK.
     """
     
     def __init__(
@@ -23,22 +20,45 @@ class BaseAgent:
         self.tools = tools or []
         self.system_instruction = system_instruction
         
-        # Initialize Gemini Model
-        # We assume the environment variable GOOGLE_API_KEY is set, 
-        # or we can pass it if the library supports it.
-        self.model = Gemini(
-            model=self.model_name
+        # Configure Gemini API
+        genai.configure(api_key=Config.GOOGLE_API_KEY)
+        
+        # Initialize the model
+        generation_config = {
+            "temperature": 0.7,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 8192,
+        }
+        
+        # Convert tools to Gemini function declarations if provided
+        tool_declarations = []
+        if self.tools:
+            for tool in self.tools:
+                # Extract function metadata for Gemini
+                tool_declarations.append(self._convert_tool_to_declaration(tool))
+        
+        self.model = genai.GenerativeModel(
+            model_name=self.model_name,
+            generation_config=generation_config,
+            system_instruction=self.system_instruction
         )
         
-        # Initialize Agent
-        self.agent = Agent(
-            model=self.model,
-            tools=self.tools,
-            system_prompt=self.system_instruction
-        )
-        
-        # Initialize Runner
-        self.runner = InMemoryRunner(agent=self.agent)
+        # Start a chat session
+        self.chat = self.model.start_chat(history=[])
+
+    def _convert_tool_to_declaration(self, tool: Callable) -> Dict:
+        """Convert a Python function to a Gemini tool declaration."""
+        # Basic conversion - you may need to enhance this based on your tools
+        return {
+            "name": tool.__name__,
+            "description": tool.__doc__ or f"Function {tool.__name__}",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        }
 
     def query(self, input_text: str, session_id: str = None) -> Dict[str, Any]:
         """
@@ -46,19 +66,20 @@ class BaseAgent:
         """
         print(f"[{self.name}] Processing: {input_text}")
         try:
-            # Execute the agent using the runner
-            response = self.runner.run(input_text)
+            # Send message to the model
+            response = self.chat.send_message(input_text)
             
-            # Extract the answer. Assuming response is the final text or has a text attribute.
-            # Adjust this based on actual ADK response structure if needed.
-            answer = str(response)
+            # Extract the answer
+            answer = response.text
             
             return {
                 "answer": answer,
-                "steps": [] # Steps capture might require different ADK configuration
+                "steps": []
             }
         except Exception as e:
             print(f"[{self.name}] Error: {e}")
+            import traceback
+            traceback.print_exc()
             return {"answer": f"Error processing request: {str(e)}", "steps": []}
 
     def get_tool_definitions(self) -> List[Dict]:

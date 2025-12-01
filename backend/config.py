@@ -9,12 +9,12 @@ class Config:
     LOCATION = os.getenv("LOCATION", "us-central1")
     
     # Model Selection
-    # Default to Gemini 1.5 Pro for Orchestrator (better reasoning)
-    ORCHESTRATOR_MODEL = os.getenv("ORCHESTRATOR_MODEL", "gemini-1.5-pro-001")
+    # Default to Gemini 2.0 Flash for Orchestrator (better reasoning)
+    ORCHESTRATOR_MODEL = os.getenv("ORCHESTRATOR_MODEL", "gemini-2.0-flash-exp")
     
-    # Default to Gemini 1.5 Flash for Sub-agents (faster/cheaper)
-    RESEARCHER_MODEL = os.getenv("RESEARCHER_MODEL", "gemini-1.5-flash-001")
-    ANALYST_MODEL = os.getenv("ANALYST_MODEL", "gemini-1.5-flash-001")
+    # Default to Gemini 2.0 Flash for Sub-agents (faster/cheaper)
+    RESEARCHER_MODEL = os.getenv("RESEARCHER_MODEL", "gemini-2.0-flash-exp")
+    ANALYST_MODEL = os.getenv("ANALYST_MODEL", "gemini-2.0-flash-exp")
     
     # Vertex AI Search
     DATA_STORE_ID = os.getenv("DATA_STORE_ID", "treg-data-store")

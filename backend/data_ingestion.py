@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 from typing import List, Dict
 
 # Configuration
-from config import Config
+from backend.config import Config
 
 def fetch_url_content(url: str) -> bytes:
     """Helper to fetch URL content using urllib."""
