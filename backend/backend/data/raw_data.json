@@ -1,0 +1,563 @@
+[
+  {
+    "source": "PubMed",
+    "id": "41324991",
+    "title": "Neutrophil-T cell crosstalk in non-infectious liver diseases.",
+    "content": "Sterile inflammation, resulting from hepatocyte death and subsequent release of damage-associated molecular patterns (DAMPs), significantly contributes to liver disease pathogenesis. Neutrophils, as primary responders to liver injury, undergo NETosis - an immune response generating neutrophil extracellular traps (NETs), further amplifying inflammatory damage. Extracellular DNA (ecDNA), a major constituent of NETs and released cell fragments, potentiates inflammation through pattern recognition receptor activation. Mitochondrial DNA, released during hepatocyte damage, especially provokes robust immune responses due to its bacterial DNA-like structure and unmethylated CpG motifs. Concurrently, purinergic signaling - particularly via ATP release and its conversion into adenosine by ectonucleotidases CD39 and CD73 - critically modulates immune homeostasis and inflammatory responses. Dysregulated expression of CD39/CD73, driven by altered aryl hydrocarbon receptor (AhR) signaling, exacerbates inflammatory states through disturbed regulatory T (Treg) and T helper (Th) 17 cell balance. Recent insights highlight that neutrophils and NETs not only drive innate inflammatory responses but significantly influence adaptive immunity by modulating T cell differentiation. NET components, such as cathelicidin and histones, actively promote Th17 differentiation while simultaneously impairing Treg functions, thereby sustaining inflammatory conditions. Additionally, T cells reciprocally influence neutrophil activation and recruitment, predominantly through IL-17A production. Detailed mechanisms underlying neutrophil-T cell crosstalk in autoimmune hepatitis, acute liver failure, ischemia/reperfusion injury, alcoholic liver disease, and metabolic dysfunction-associated steatotic liver disease underscore potential therapeutic targets. Future strategies targeting NET formation, ecDNA clearance via DNase therapy, purinergic receptor modulation, and restoring AhR signaling hold promise for effectively attenuating sterile inflammation and immune dysregulation in liver diseases.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41324991/",
+    "journal": "American journal of physiology. Gastrointestinal and liver physiology",
+    "publication_date": "2025-Dec-01",
+    "authors": [
+      "Barbora Gromova",
+      "Viera Kupcova",
+      "Maria Serena Longhi",
+      "Roman Gardl\u00edk"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41324806",
+    "title": "Immunological mechanisms underlying the novel application of mesenchymal stromal cell-derived extracellular vesicles (MSC-EVs) in graft-versus-host disease (GvHD) therapy.",
+    "content": "A serious side effect of allogeneic hematopoietic cell transplantation (HCT) is known as graft-versus-host disease (GvHD), in which the recipient's body is attacked by donor immune cells, leading to a high rate of morbidity and death. Although there are several therapies available for GvHD, their efficacy is limited, and they sometimes have serious adverse effects. Recently, one of the most interesting research in the field of cell therapy is the use of mesenchymal stromal cells (MSCs), which have been investigated in the treatment of HCT and its consequences such as GvHD, due to their potential in tissue repair and immunomodulatory activities. The potential negative consequences of direct cell transplantation are avoided by using MSC-EVs, which are micro vesicles packed with physiologically active materials like proteins, microRNAs, and other nucleic acids. One of the biggest advantages of MSC-EVs is their ability to dramatically alter immune cell responses in GvHD by delivering immunomodulatory chemicals and anti-inflammatory drugs to recipient cells. Some of the significant discoveries include encouraging the differentiation of pro-inflammatory macrophages into tissue-reparative macrophages, inhibiting the generation of inflammatory cytokines, and improving the function of regulatory T-cells. This study details the effects of MSC-EVs on the multiple alterations that occurred inside host cells as well as immunomodulation mediated by both T cells and antigen-presenting cells in terms of the immunopathology of GvHD and direct regenerative effects on damaged tissues.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41324806/",
+    "journal": "Molecular biology reports",
+    "publication_date": "2025-Dec-01",
+    "authors": [
+      "Fatemeh Ahangari",
+      "Mina Alimohammadi",
+      "Seyed Mahmoud Hashemi"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41323783",
+    "title": "The immunosuppressive role of CCR8",
+    "content": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41323783/",
+    "journal": "Journal of Cancer",
+    "publication_date": "2025",
+    "authors": [
+      "Koichi Jinushi",
+      "Yoshinori Hayashi",
+      "Koichi Morishita",
+      "Takuro Saito",
+      "Atsunari Kawashima",
+      "Yuichiro Doki",
+      "Azumi Ueyama",
+      "Hisashi Wada"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41322150",
+    "title": "Generating tolerance through in situ recruitment of regulatory T cells for allogeneic cell transplantation in a bioengineered lymphoid platform.",
+    "content": "Cellular therapies aim to treat or manage disease by introducing living cells that integrate into the host and restore or eliminate dysfunctional tissues. Despite their promise for clinical success, the host immune response to cellular treatments remains a challenge since traditional approaches for abrogating immune rejection involve systemic immunosuppression, which results in severe off-target toxicity. One alternate strategy for restraining immune responses involves harnessing the natural immunomodulatory capabilities of regulatory T cells (Tregs), a specialized subset of T cells that suppress inflammatory immune responses and can promote induction and maintenance of transplant tolerance. Here we propose using the NanoLymph platform, an implantable subcutaneous device for continuous localized recruitment of Tregs, to achieve immunological tolerance free of systemic immunosuppression. The NanoLymph features a dual-reservoir system for the sustained release of immunomodulatory agents through a nanoporous membrane and a vascularized compartment that supports cell homing and allograft integration with the host. This work demonstrates robust vascularization of the NanoLymph by four weeks post-implantation, along with sustained in vivo elution of immunomodulatory agents for up to one month that selectively recruit and expand Tregs. Finally, we demonstrate that NanoLymph prolongs cell persistence in a bioluminescent allogeneic transplant model. Overall, the NanoLymph represents a versatile platform to generate a safe and localized tolerogenic microenvironment relevant for cell transplant therapies.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41322150/",
+    "journal": "Materials today. Bio",
+    "publication_date": "2025-Dec",
+    "authors": [
+      "Nikitha Kota",
+      "Danilo Settis",
+      "Martina Concato",
+      "Noemi Risso",
+      "Robin Vander Pol",
+      "Casey Lewis",
+      "Yongbin Liu",
+      "Yafet Arefeayne",
+      "Federica Banche-Niclot",
+      "Laura Segatori",
+      "Francesca Taraballi",
+      "Junhua Mai",
+      "Alessandro Grattoni",
+      "Corrine Ying Xuan Chua"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41321309",
+    "title": "LC3-dependent intercellular transfer of phosphorylated STAT1/2 elicits CXCL9+ macrophages and enhances radiation-induced antitumor immunity.",
+    "content": "The efficacy of anticancer treatments, including radiotherapy, depends on the activation of type I IFN signaling. However, its regulatory networks and mechanisms remain to be elucidated. Here, we report that tumor cell-intrinsic type I IFN signaling can be transferred to macrophages via secretory autophagy, inducing CXCL9hi macrophages and enhancing CD8+ T cell-mediated antitumor immunity. Mechanistically, K63-linked ubiquitination at the K167 site of phosphorylated STAT2 (p-STAT2) facilitates its binding to LC3B, promoting the loading of p-STAT1 and p-STAT2 into extracellular vesicles and intercellular transference from tumor cells to macrophages, which, however, is suppressed by USP5-mediated STAT2 deubiquitination. Genetic depletion or pharmacological inhibition of USP5 promotes autophagy-dependent unconventional protein secretion of p-STAT1 and p-STAT2, leading to the induction of CXCL9+ macrophages. This process promotes the expression of T cell chemokines and upregulates the antigen presentation machinery, thereby enhancing radiation-induced CD8+ T cell antitumor immunity and radiotherapy efficacy. Our findings reveal a critical role of USP5 in type I IFN-induced antitumor immunity, providing potential targets for improving the efficacy of radiotherapy.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41321309/",
+    "journal": "The Journal of clinical investigation",
+    "publication_date": "2025-Dec-01",
+    "authors": [
+      "Jun-Yan Li",
+      "Ying-Qing Li",
+      "Jia-Hao Dai",
+      "Sha Gong",
+      "Qing-Mei He",
+      "Jie-Wen Bai",
+      "Sai-Wei Huang",
+      "Ying-Qi Lu",
+      "Yu-Fei Duan",
+      "Sen-Yu Feng",
+      "Xi-Rong Tan",
+      "Xiao-Yu Liang",
+      "Jun Ma",
+      "Rui Guo",
+      "Na Liu"
+    ]
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT03787966",
+    "title": "Attenuating Cancer Treatment-related Toxicity in Oncology Patients With a Tailored Physical Exercise Program: Study Protocol of the ATOPE Trial in Women Recently Diagnosed With Breast Cancer",
+    "content": "The aim of this study is to determine if therapeutic exercise before anticancer treatment will mitigate the onset or extent of cardiotoxicity comparing to therapeutic exercise performed during anticancer treatment.",
+    "url": "https://clinicaltrials.gov/study/NCT03787966"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT04038619",
+    "title": "Fecal Microbiota Transplantation (FMT) for Immune-Checkpoint Inhibitor Induced-Diarrhea/Colitis in Genitourinary Cancer Patients",
+    "content": "This trial studies how well fecal microbiota transplantation works in treating diarrhea or colitis (inflammation of the intestines) that is caused by certain types of medications (called immune-checkpoint inhibitors) in patients with genitourinary cancer. Fecal microbiota transplantation may effectively reduce the incidence of immune checkpoint inhibitor-induced diarrhea/colitis.",
+    "url": "https://clinicaltrials.gov/study/NCT04038619"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT05962762",
+    "title": "A Clinical Trial to Evaluate the Safety, Tolerance and Efficacy of aCell Injection of Allogeneic UC-MSCs in Patients With Ankylosing Spondylitis",
+    "content": "The goal of this clinical trial is to evaluate the safety and tolerability of multiple doses of human umbilical cord mesenchymal stem cell injection in patients with Ankylosing Spondylitis, and to further explore the efficacy, pharmacodynamic profile and appropriate dose of administration to provide a basis for the use of safer and more effective treatments for patients with Ankylosing Spondylitis in the future.\n\nParticipants are required to sign an informed consent form and, after undergoing a series of tests and meeting the protocol's entry and exclusion criteria, are assigned to a dose group for intravenous infusion of human umbilical cord mesenchymal stem cells.",
+    "url": "https://clinicaltrials.gov/study/NCT05962762"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT02240381",
+    "title": "Metabolic and CD4+ T Cell Dysregulation in Post-Transplant Diabetes Mellitus",
+    "content": "This clinical trial studies the physiology and immunology of new-onset post-transplant diabetes mellitus in patients undergoing allogeneic stem cell transplantation. Oral glucose tolerance testing (OGTT), euglycemic hyperinsulinemic clamps, and immune assays will be used to define the mechanisms associated with abnormal glucose homeostasis following stem cell transplantation. Information from this clinical trial could be used to develop standardized screening procedures or to develop optimal treatment strategies for patients developing post-transplant diabetes mellitus.",
+    "url": "https://clinicaltrials.gov/study/NCT02240381"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT01526096",
+    "title": "Pilot Study T Cell Depletion in the Setting of Autologous Stem Cell Transplantation for Patients With Multiple Myeloma",
+    "content": "The purpose of this study is to test whether regulatory T-cell reduction is possible and safe in myeloma subjects undergoing autologous stem cell transplantation (ASCT).",
+    "url": "https://clinicaltrials.gov/study/NCT01526096"
+  },
+  {
+    "source": "PubMed",
+    "id": "41268661",
+    "title": "OxLDL-Targeted Chimeric Antigen Receptor T Regulatory Cells Reduce Atherosclerotic Plaque Development.",
+    "content": "Cardiovascular disease caused by atherosclerosis is responsible for 18 million deaths annually, highlighting a significant need for new medical therapies, especially for patients who are not eligible for percutaneous interventions. Atherosclerosis is driven by the accumulation of low-density lipoprotein (LDL) and the formation of foam cells, accompanied by oxidative stress and the accumulation of oxidized LDL (OxLDL), a pro-inflammatory molecule. Lowering LDL is the mainstay of current treatment along with blood pressure control and lifestyle changes, but to date, it has not been feasible to specifically target inflammatory pathways contributing to plaque development without significant systemic side effects. Over the past decade, chimeric antigen receptor (CAR) T cells have been used to treat cancer, resolve cardiac fibrosis, and restore immune balance in autoimmune diseases. In some instances, T regulatory cells endowed with CAR (CAR Tregs) have been developed to treat autoimmunity through antigen-specific immunosuppression.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41268661/",
+    "journal": "Circulation",
+    "publication_date": "2025-Nov-21",
+    "authors": [
+      "Robert D Schwab",
+      "David Degaramo",
+      "Seok Jae Hong",
+      "Xin Bi",
+      "Aisha Faruqi",
+      "William Aguilar",
+      "Shawna K Brookens",
+      "John T Keane",
+      "Fang Liu",
+      "Kiran Musunuru",
+      "Daniel J Rader",
+      "Avery D Posey"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41246323",
+    "title": "Regulatory T cell therapies: from patient data to biological insights.",
+    "content": "Regulatory T cell (Treg) therapies are emerging as powerful tools for treating autoimmune and inflammatory diseases, preventing graft-versus-host disease (GvHD), and promoting organ transplant tolerance. Building on the identification of chimeric antigen receptor (CAR)-expressing Tregs as a correlate of poor patient outcomes in CD19-CAR T cell therapy, this review examines strategies for learning from clinical samples and data to improve Treg therapies. We highlight current and next-generation Treg modalities, including polyclonal, antigen-specific, converted, TCR-engineered, and CAR-engineered Tregs, provide a comprehensive overview of Treg clinical trials, and evaluate the evolving toolkit for ",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41246323/",
+    "journal": "Frontiers in immunology",
+    "publication_date": "2025",
+    "authors": [
+      "Kameron B Rodrigues",
+      "Peter J Eggenhuizen",
+      "Rosa Bacchetta",
+      "Zinaida Good"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41235222",
+    "title": "Opportunities and challenges harnessing antigen-specific CD4+ regulatory T cells in inflammatory bowel disease.",
+    "content": "Inflammatory bowel diseases (IBD), including Crohn\u00b4s disease (CD) and ulcerative colitis (UC) remain highly prevalent and are associated with a reduced quality of life in affected patients. The pathophysiology of IBD is multifactorial since genetic predisposition, altered immune function, changes in intestinal microbiota, environmental factors, and loss of intestinal barrier function together induce disease manifestation. A critical key factor is the dysregulation of the immune system which explains that all medical therapeutic approaches target the immune response. However, the success of these therapies is limited and associated with severe side effects which demonstrates the need for novel therapeutic approaches. Previous research demonstrated that CD4+ regulatory T (Treg) cells are important regulators of intestinal homeostasis but are reduced in number and function relative to effector T cells in IBD. This led to the concept that genetically engineered, antigen-specific Tregs may represent a promising strategy to address immune dysregulation in IBD. Due to their antigen specificity, chimeric antigen receptors (CARs) enable additional target-dependent activation and migration of Tregs at disease sites. While CARs are increasingly established for the generation of antigen-specificity for T cell therapies in cancer, the implementation of CARs for IBD is in a preliminary state. Nonetheless, CAR constructs specific to circulating carcinoembryonic antigen (CEA), flagellin, or IL23R have been developed recently for potential application in IBD. Based on these novel developments, this review will discuss the role of Tregs in IBD disorders and present the current state of CAR Treg models.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41235222/",
+    "journal": "Frontiers in immunology",
+    "publication_date": "2025",
+    "authors": [
+      "Jessica K\u00fcmmel",
+      "Nicolas Schlegel",
+      "Johanna C Wagner"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41226824",
+    "title": "Unraveling Type 1 Diabetes: Integrating Microbiome, Metabolomics, and Immunomodulation for Next-Generation Therapies.",
+    "content": "Type 1 diabetes (T1D) is a chronic autoimmune disease characterized by T-cell-mediated destruction of pancreatic beta cells, resulting in insulin deficiency. Both genetic predisposition and environmental factors contribute to T1D development, with growing evidence implicating the gut microbiome as a critical environmental modulator in disease pathogenesis. Gut microbial composition and derived metabolites influence immune homeostasis and autoimmunity. This review summarizes recent advances elucidating immune dysregulations in T1D and novel therapeutic strategies to preserve beta cell function. We discuss approaches such as immune cell engineering, including CAR-Treg therapy, and targeted modulation of immune signaling pathways like JAK-STAT. Furthermore, we explore the role of the gut microbiota and its metabolites in modulating host immunity and describe emerging microbiome-targeting interventions, including fecal microbiota transplantation and metabolite supplementation. These interventions show promise in modulating disease progression in preclinical and early clinical studies. An integrated understanding of immune and microbiome-related mechanisms is critical for developing next-generation therapies. Further research and clinical trials are needed to optimize these approaches and translate them into durable, personalized treatments for individuals with T1D.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41226824/",
+    "journal": "International journal of molecular sciences",
+    "publication_date": "2025-Nov-06",
+    "authors": [
+      "Pleun de Groen",
+      "Lente C H M Blok",
+      "Coco M Fuhri Snethlage",
+      "Nordin M J Hanssen",
+      "Elena Rampanelli",
+      "Max Nieuwdorp"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41208643",
+    "title": "Chimeric Antigen Receptor T-Cell Therapy and Autoimmune Diseases in the Nervous System.",
+    "content": "Chimeric antigen receptor T-cell (CAR-T) therapy, a revolutionary immunotherapy originally developed for hematologic malignancies, has recently gained attention for its potential in treating autoimmune diseases. Increasing evidence suggests that CAR-T cells can precisely target pathogenic immune populations, offering durable remission and immune homeostasis restoration in neuroimmunological disorders such as myasthenia gravis (MG), neuromyelitis optica spectrum disorder (NMOSD), and multiple sclerosis (MS).",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41208643/",
+    "journal": "Immunity, inflammation and disease",
+    "publication_date": "2025-Nov",
+    "authors": [
+      "Shun-Yu Yao",
+      "Miao-Qiao Du",
+      "Huan Yang",
+      "Qiu-Ming Zeng",
+      "Hao Zhou",
+      "Xiuli Zhang",
+      "Sugimoto Kazuo",
+      "Jia Liu",
+      "Lan-Xin Lin",
+      "Xu-Hui Kang",
+      "Dai-Yi Jiang",
+      "Yong Peng"
+    ]
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT04203459",
+    "title": "Study on the Mechanism of Enhancing the Anti-tumor Effects of Human Chimeric Antigen Receptors T Cells on Pancreatic Cancer by Gut Microbiota Regulation",
+    "content": "Pancreatic cancer (PC) is one of the deadliest diseases of human digestive malignancies. Despite the recent advances in surgery and chemotherapy, the 5-year survival rate of PC continues to be less than 10%. As a promising tumor therapy,Chimeric antigen receptor T cell (CAR-T), however, performed poorly in PC treatment and need to be further updated. In our study, on the basis of our previous research, we use anti-MSLN CAR-T as effector cell and explore the different effects and mechanism of gut microbiota (PC or healthy control) on anti-MSLN CAR-T treatment. Firstly, we detect the differences of gut microbiota and T cell cholesterol metabolism in PC and healthy control by means of 16S-rRNA,PCR, western blot and ELISA; explore the different effects of gut microbiota on the subtype of T cells; and analyze the relationships between intestinal flora composition and T cell cholesterol metabolism or subtype changes by means of Spearman's correlation. Secondly, we also explore the different effects of gut microbiota on the proliferation, migration, subtype, inflammatory cytokines expression and anti-tumor effector function of anti-MSLN CAR-T cells by means of flow cytometry and cytotoxicity assay. Thirdly, we discuss the different expression of cholesterol esterification enzyme 1 (ACAT-1) and other core genes of cholesterol metabolism in anti-MSLN CAR-T. Lastly, we evaluate the effects of different gut microbiota on the treatment of PC by anti-MSLN CAR-T cells in NSG mouse model of subcutaneous PC transplantation and liver metastasis. Through the above experiments, a new theoretical basis is provided in which gut microbiota regulates the subtype and anti-tumor function of anti-MSLN CAR-T by ACAT-1 expression. Furthermore, our findings, which demonstrate the relationship of gut microbiota and CAR-T cell, may be translatable for the treatment of other solid tumors like PC.",
+    "url": "https://clinicaltrials.gov/study/NCT04203459"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT03115125",
+    "title": "Descriptive Study of the Evolution in Proportion of Regulatory B Lymphocytes in Patients Hospitalized in Intensive Care for Severe Sepsis",
+    "content": "Severe sepsis and septic shock are the most severe forms of sepsis (which associates a systemic inflammatory response with infection). These are serious pathologies with a lethality estimated at almost 40% at 28 days (after the onset of sepsis).\n\nAfter a first pro-inflammatory phase, a second compensatory phase called Compensatory Anti-Inflammatory Response Syndrome (CARS) takes place quickly. Patients then show signs of immunosuppression and profound alterations in immune functions. It is during this phase that the vast majority of deaths occur, far from the onset of the shock, which is related to the inability of the immune system to eliminate the initial infectious agent and / or a greater susceptibility Important to develop secondary infections (nosocomial infection, latent virus reactivation ...).\n\nThe CARS phase has been the subject of studies focusing on measuring the plasma concentration of anti-inflammatory cytokines (such as Interleukin (IL) -10), the percentage of regulatory T lymphocytes (Treg), Or the percentage of monocytic expression of HLA-DR in septic patients.\n\nThe investigator proposes to carry out the first study on a newly described regulatory lymphocytic subpopulation: regulatory B lymphocytes (Breg) from a quantitative and functional point of view in severe septic states.",
+    "url": "https://clinicaltrials.gov/study/NCT03115125"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT03716856",
+    "title": "Clinical Study of Redirected Autologous T Cells With a BCMA-targeted Chimeric Antigen Receptor in Patients With Refractory or Relapsed Multiple Myeloma",
+    "content": "A single arm, open-label pilot study is designed to determine the safety, efficacy and cytokinetics of CAR-BCMA T cells in patients with BCMA-positive refractory or relapsed multiple myeloma.",
+    "url": "https://clinicaltrials.gov/study/NCT03716856"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT07117175",
+    "title": "A Clinical Study to Evaluate the Safety and Efficacy of Anti-human CD 7 CAR-NK Cell Injection in Subjects With Relapsed and Refractory CD7-positive Hematological Malignancy",
+    "content": "This study is a single-arm, open-label, dose-escalation clinical trial to explore the safety, tolerability, pharmacokinetics and pharmacodynamics characteristics of the drug; The efficacy of the study drug in subjects with relapsed/refractory CD7-positive hematological malignancies, and the expression of B cells, T cells, and NK cell subtypes in peripheral blood were preliminarily observed. At the same time, explporing the distribution of anti-human CD7 CAR-NK cells in tumor tissues after administration of anti-human CD7 CAR-NK cell injection, and evaluating the immunogenicity of anti-human CD7 CAR-NK cell injection . To evaluate the correlation between the proportion of CD7-positive tumor cells and the safety and efficacy of anti-human CD7 CAR-NK cell injection and the evaluation. To explore the pharmacokinetics (PK) and pharmacodynamics(PD) characteristics of bone marrow in Chinese medicine.",
+    "url": "https://clinicaltrials.gov/study/NCT07117175"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT05234190",
+    "title": "A Single-arm, Open-label, Multi-center, Phase I/II Study Evaluating the Safety and Clinical Activity of QEL-001, an Autologous CAR T Regulatory Cell Treatment Targeting HLA-A2, in HLA-A2/ A28neg Patients That Have Received an HLA-A2pos Liver Transplant.",
+    "content": "The purpose of this study is to evaluate the safety and tolerability of QEL-001 in the prevention of liver transplant rejection following immunosuppression withdrawal. QEL-001 is a product made from a patients own cells, which are genetically modified and designed to help the transplant recipient's body accept their donated liver and prevent their immune system from rejecting it once immune suppression is withdrawn.",
+    "url": "https://clinicaltrials.gov/study/NCT05234190"
+  },
+  {
+    "source": "PubMed",
+    "id": "41300507",
+    "title": "Anti-Tumoral Treatment with Thioredoxin Reductase 1 Inhibitor Auranofin Fosters Regulatory T Cell and B16F10 Expansion in Mice.",
+    "content": "Auranofin, an FDA-approved antirheumatic drug and thioredoxin reductase 1 (TXNRD1) inhibitor, has demonstrated anti-tumoral properties, but its immunological effects are not well characterized. Here, we report that auranofin unexpectedly promotes regulatory T cell (Treg) expansion. In a B16F10 melanoma model, auranofin treatment increased lung tumor coverage, IL-10 serum levels, and FOXP3",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41300507/",
+    "journal": "Antioxidants (Basel, Switzerland)",
+    "publication_date": "2025-Nov-11",
+    "authors": [
+      "Michael Y Bonner",
+      "Tamas Vancsik",
+      "Ana Oliveira-Coelho",
+      "Pierre Sabatier",
+      "Christian M Beusch",
+      "Kejsi Zeqiraj",
+      "Carolin Svensson",
+      "Roman A Zubarev",
+      "Elias S J Arn\u00e9r",
+      "Rikard Holmdahl"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41050699",
+    "title": "HLA-DR expression in cytotoxic T lymphocytes: a key to boost the therapeutic potential of T cell-based strategies for breast cancer.",
+    "content": "T cell-based therapies, involving ",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41050699/",
+    "journal": "Frontiers in immunology",
+    "publication_date": "2025",
+    "authors": [
+      "Rute Salvador",
+      "Bruna Filipa Correia",
+      "Daniela Grosa",
+      "Telma Martins",
+      "Suelen Cristina Soares Baal",
+      "Diana Pereira Saraiva",
+      "Sofia Crist\u00f3v\u00e3o-Ferreira",
+      "Isabel Lopes Pereira",
+      "C\u00e1tia Rebelo de Almeida",
+      "Rita Fior",
+      "Antonio Jacinto",
+      "Carolina Mathias",
+      "Sofia Braga",
+      "M Guadalupe Cabral"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41022795",
+    "title": "Neuron-reactive KIR",
+    "content": "Autoreactive CD8",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41022795/",
+    "journal": "Nature communications",
+    "publication_date": "2025-Sep-29",
+    "authors": [
+      "Sylvain Perriot",
+      "Samuel Jones",
+      "Rapha\u00ebl Genolet",
+      "Amandine Mathias",
+      "Helen Lindsay",
+      "Sara Bobisse",
+      "Giovanni Di Liberto",
+      "Mathieu Canales",
+      "Lise Queiroz",
+      "Christophe Sauvage",
+      "Ingrid Wagner",
+      "Larise Oberholster",
+      "Marie Gimenez",
+      "Diane B\u00e9garie",
+      "Stjepana Kovac",
+      "Virginie Desestret",
+      "Marie Th\u00e9audin",
+      "Caroline Pot",
+      "Heinz Wiendl",
+      "J\u00e9r\u00f4me Honnorat",
+      "Doron Merkler",
+      "Rapha\u00ebl Gottardo",
+      "Alexandre Harari",
+      "Renaud Du Pasquier"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "40977146",
+    "title": "TNF Production or TNFR2 Expression Characterize Distinct States of Regulatory T Cells that Cooperate in Treg Expansion in Cancer and Chronic Inflammation.",
+    "content": "TNF is a pleiotropic cytokine with immunomodulatory functions mediated by its interaction with the receptor TNFR2, highly expressed by Tregs. However, Tregs can also produce TNF, and an autocrine TNF-TNFR2 loop has been proposed. Here, we describe that both human and mouse Tregs produce TNF in physiological conditions, in several mouse organs, and in mouse models of chronic inflammation and cancer. However, TNF production and TNFR2 expression are differentially distributed: indeed, TNFR2",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40977146/",
+    "journal": "European journal of immunology",
+    "publication_date": "2025-Sep",
+    "authors": [
+      "Gloria Tucci",
+      "Ilenia Pacella",
+      "Alessandra Pinzon Grimaldos",
+      "Alessandra Rossi",
+      "Ilenia Cammarata",
+      "Marta Zagaglioni",
+      "Giovanna Peruzzi",
+      "Valentina Tirelli",
+      "Massimo Sanchez",
+      "Giuseppe Pietropaolo",
+      "Francesca Sozio",
+      "Annalisa Del Prete",
+      "Valerio Licursi",
+      "Vincenzo Barnaba",
+      "Silvia Piconese"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "40761287",
+    "title": "Induction of immune tolerance in NMOSD and MOGAD.",
+    "content": "Neuromyelitis optica spectrum disorder (NMOSD) and myelin oligodendrocyte glycoprotein antibody-associated disease (MOGAD) are autoimmune diseases characterized by immune-mediated damage to the central nervous system. Current treatments primarily focus on chronic immunosuppression. Immune tolerance induction offers a novel approach to restoring immune balance while minimizing systemic side effects. Central and peripheral immune tolerance mechanisms regulate autoreactive lymphocytes, ensuring immune homeostasis. Dysregulation of these pathways underpins NMOSD and MOGAD pathogenesis. Antigen-specific therapies targeting aquaporin-4 (AQP4) or myelin oligodendrocyte glycoprotein (MOG) autoantigens include peptide-based vaccines and nanoparticle delivery systems, promoting T cell anergy and regulatory T cell (Treg) expansion. Cell-based therapies utilizing ex vivo-expanded Tregs or regulatory B cells (Bregs) have shown promise in preclinical models but face challenges in clinical translation due to scalability and safety concerns. Gene-editing technologies such as CRISPR/Cas9 present opportunities to modulate immune pathways and restore tolerance, although delivery and off-target effects remain obstacles. Additionally, strategies addressing double-seronegative NMOSD, which lacks detectable autoantibodies, emphasize broad immune modulation rather than antigen specificity. While significant progress has been achieved, the transition to clinical application requires overcoming hurdles such as optimizing antigen delivery, ensuring long-term efficacy, and identifying reliable biomarkers. Advances in personalized medicine hold promise for achieving sustained remission, reducing dependency on immunosuppression, and improving patient outcomes in NMOSD and MOGAD. This review explores advancements in tolerance strategies, highlighting their potential in NMOSD and MOGAD.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40761287/",
+    "journal": "Therapeutic advances in neurological disorders",
+    "publication_date": "2025",
+    "authors": [
+      "Jorge Correale",
+      "Edgar Carnero Contentti"
+    ]
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT03185000",
+    "title": "A First in Human Feasibility Study of T Regulatory Cells (TR004) for Inflammatory Bowel Disease Using (ex Vivo) Treg Expansion",
+    "content": "Crohn's Disease (CD) is a condition that causes inflammation of the digestive system or gut. Crohn's can affect any part of the gut, though the most common area affected is the end of the ileum (the last part of the small intestine), or the colon.\n\nCrohn's is a chronic condition. This means that it is ongoing and life-long, although patients may have periods of good health (remission), as well as times when symptoms are more active (relapses or flare-ups).\n\nCurrent available therapies frequently fail to maintain long-term remission and may be complicated by significant side effects.\n\nThere is an unmet medical need for novel therapies. Cellular therapies are emerging as potentially attractive therapeutic strategies.\n\nThe TRIBUTE trial will use autologous regulatory T cells (Tregs) expanded in vitro.\n\nIt is hoped that the administration of this treatment to patients with active CD will change the immune responses in the gut and reduce bowel wall inflammation.",
+    "url": "https://clinicaltrials.gov/study/NCT03185000"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT05066165",
+    "title": "Phase 1/2a, Single Dose Study Investigating NTLA-5001 in Subjects With Acute Myeloid Leukemia",
+    "content": "This study will be conducted to evaluate the safety, tolerability, cellular kinetics (CK), activity, and pharmacodynamics (PD) of NTLA-5001 in participants with Acute Myeloid Leukemia (AML).",
+    "url": "https://clinicaltrials.gov/study/NCT05066165"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT05250856",
+    "title": "A Phase 1b/2a Study to Evaluate the Safety, Tolerability, and Pharmacodynamics of CNP-201 in Subjects Ages 16-55 With Peanut Allergy",
+    "content": "This study is a Phase 1b/2a clinical trial to assess the safety, tolerability, and pharmacodynamics of multiple ascending doses (Escalation Phase) of CNP-201 with the goal of identifying a safe and tolerable dose level to be evaluated further in a larger number of subjects (Expansion Phase).",
+    "url": "https://clinicaltrials.gov/study/NCT05250856"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT06777719",
+    "title": "Eight-Treg Study: a Phase I Dose Escalation Trial of Adoptive Immunotherapy With Autologous ex Vivo Expanded Regulatory CD8+ T Cells in Living Donor Kidney Transplant Recipients",
+    "content": "The only curative treatment for end-stage renal disease is through kidney transplantation. Solid organ transplants success had been made possible by the development of Immunosuppressive (IS) drugs. However, the long-term survival of transplants is still shortened by the chronic dysfunction of the graft which is not prevented by current IS regimens. Moreover, these IS drugs increase the risk of opportunistic infections and malignancies, and have many non-immune side-effects that hamper their tolerability.\n\nNew research strategies are, therefore, developed with the aim of reducing the dependence on conventional pharmacological IS drugs. Regulatory cell therapy is one of these strategies. It consists of expanding specific populations of immune regulatory cells ex vivo into cell-based drugs that can then be infused into transplant recipients, with the goal of inducing graft tolerance.\n\nThis is the framework of this clinical trial. The experimental drug \"Eight Treg\" being evaluated in this study is an autologous cell therapy product containing CD8+ regulatory T lymphocytes (Tregs) expanded ex vivo during 21 days of cell culture. Team 2 of the Center for Research in Transplantation and Translational Immunology (CR2TI), Nantes University, INSERM, Mixed Research Unit (UMR) 1064, responsible for developing the manufacturing process of the experimental drug \"Eight Treg\", has demonstrated the feasibility of the expansion of CD8+ Tregs ex vivo and their ability to prevent skin graft rejection and inhibit Graft Versus Host Disease (GVHD) in NOD-Scid-IL-2\u03b3-/- mouse models (NSG)14.\n\nBased on the preclinical experience of CR2TI team 2, which has been working on basic and translational aspects of CD8+ Tregs for 15 years, the present phase I clinical trial aims to assess the safety of increasing doses of the experimental drug \"Eight Treg\" in 9 recipients of renal transplantation from a living donor. The possibility of manufacturing the experimental drug \"Eight Treg\" at the required doses, in accordance with the Good Manufacturing Process (GMP), has been assessed in validation runs as specified at the end of the \"justification of the study\" part of this protocol. This clinical trial will be the first administration of expanded CD8+ Tregs into humans, and it follows previous studies which evaluated the safety of other regulatory cell therapy products, containing expanded CD4+ Tregs and other regulatory cells (autologous tolerogenic dendritic cells performed by Nantes CHU laboratory and clinical services, for example), injected into patients in different contexts (renal transplantation, liver transplantation, GVHD, type 1 diabetes, etc) without causing any significant adverse effect. This study will pave the way for future, broader research on the use of CD8+ Tregs as a possible anti-rejection and tolerance inducer \"drug\" in transplantation.",
+    "url": "https://clinicaltrials.gov/study/NCT06777719"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT01306019",
+    "title": "Lentiviral Gene Transfer for Treatment of Children Older Than 2 Years of Age With X-Linked Severe Combined Immunodeficiency",
+    "content": "This is a Phase I/II non-randomized clinical trial of ex vivo hematopoietic stem cell (HSC) gene transfer treatment for X-linked severe combined immunodeficiency (XSCID, also known as SCID-X1) using a self-inactivating lentiviral vector incorporating additional features to improve safety and performance. The study will treat 35 patients with XSCID who are between 2 and 50 years of age and who have clinically significant impairment of immunity. Patients will receive a total busulfan dose of approximately 6 mg/kg/body weight (target busulfan Area Under Curve is 4500 min\\*micromol/L/day) delivered as 3mg/kg body weight on day 1 and dose adjusted on day 2 (if busulfan AUC result is available) to achieve the target dose, to condition their bone marrow, and this will be followed by a single infusion of autologous transduced CD34+HSC. Patients will then be followed to evaluate engraftment, expansion, and function of gene corrected lymphocytes that arise from the transplant; to evaluate improvement in laboratory measures of immune function; to evaluate any clinical benefit that accrues from the treatment; and to evaluate the safety of this treatment. The primary endpoint of the study with respect to these outcomes will be at 2 years, though data relevant to these measures will be collected at intervals throughout the study and during the longer follow-up period of at least 15 years recommended by the Food and Drug Administration (FDA) Guidance \"Long Term Follow-Up After Administration of Human Gene Therapy Products\" https://www.fda.gov/media/113768/download for patients\n\nparticipating in gene transfer clinical trials.\n\nXSCID results from defects in the IL2RGgene encoding the common gamma chain (yc) shared by receptors for Interleukin 2 (IL-2), IL-4, IL-7, IL-9, IL-15 and IL-21. At birth XSCID patients generally lack or have a severe deficiency of T-lymphocytes and NK cells, while their B- lymphocytes are normal in number but are severely deficient in function, failing to make essential antibodies. The severe deficiency form of XSCID is fatal in infancy without intervention to restore some level of immune function. The best current therapy is a T-lymphocyte-depleted bone marrow transplant from an HLA tissue typing matched sibling, and with this type of donor it is not required to administer chemotherapy or radiation conditioning of the patient's marrow to achieve excellent engraftment and immune correction of an XSCID patient. However, the great majority of patients with XSCID lack a matched sibling donor, and in these patients the standard of care is to perform a transplant of T- lymphocyte depleted bone marrow from a parent. This type of transplant is called haploidentical because in general a parent will be only half- matched by HLA tissue typing to the affected child. Whether or not any conditioning is used, haploidentical transplant for XSCID has a significantly poorer prognosis than a matched sibling donor transplant. Following haploidentical transplant, XSCID patients are observed to achieve a wide range of partial immune reconstitution and that reconstitution can wane over time in some patients. That subset of XSCID patients who either fail to engraft, fail to achieve adequate immune reconstitution, or lose immune function over time suffer from recurrent viral, bacterial and fungal infections, problems with allo- or autoimmunity, impaired pulmonary function and/or significant growth failure.\n\nWe propose to offer gene transfer treatment to XSCID patients\\^3 \\>= 2 years of age who have clinically significant defects of immunity despite prior haploidentical hematopoietic stem cell transplant, and who lack an HLA-matched sibling donor. Our current gene transfer treatment protocol can be regarded as a salvage/rescue protocol.\n\nPrior successful retroviral gene transfer treatment instead of bone marrow transplant (BMT) in Paris and London for 20 infants with XSCID has provided proof of principle for efficacy. However, a major safety concern is the occurrence of 5 cases of leukemia at 3-5 years after treatment triggered in part by vector insertional mutagenesis activation of LMO2 and other DNA regulatory genes by the strong enhancer present in the long-terminal repeat (LTR) of the Moloney Leukemia Virus (MLV)- based vector.\n\nFurthermore, previous studies of gene transfer treatment of older XSCID patients with MLV- based vectors demonstrated the additional problem of failure of adequate expansion of gene corrected T- lymphocytes to the very high levels seen in infants. To reduce or eliminate this leukemia risk, and possibly enhance performance sufficiently to achieve benefit in older XSCID patients, we have generated a lentivector with improved safety and performance features. We have generated a self-inactivating (SIN) lentiviral vector that is devoid of all viral transcription elements; that contains a short form of the human elongation factor 1a (EF1a) internal promoter to expres...",
+    "url": "https://clinicaltrials.gov/study/NCT01306019"
+  },
+  {
+    "source": "PubMed",
+    "id": "41316265",
+    "title": "Improving T cell expansion by optogenetically engineered bacteria-loaded MMP-2-responsive cyclophosphamide for antitumor immunotherapy.",
+    "content": "The efficacy of antitumor immunotherapy is closely associated with the expansion of tumor-infiltrating CD8",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41316265/",
+    "journal": "Journal of nanobiotechnology",
+    "publication_date": "2025-Nov-28",
+    "authors": [
+      "Jiawen Chen",
+      "Renjiang Kong",
+      "Yuzhi Qiu",
+      "Sihan Chen",
+      "Yidi Liu",
+      "Xi Yu",
+      "Xiangliang Yang",
+      "Yan Zhang",
+      "Yanhong Zhu"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41267047",
+    "title": "Immunomodulatory interventions in type 1 diabetes: a systematic review and meta-analysis revealing paradoxical dissociation between beta-cell preservation and glycemic control.",
+    "content": "Immunomodulatory therapies aim to preserve beta-cell function in type 1diabetes (T1D), yet their clinical translation remains inconsistent. Weconducted a systematic review and meta-analysis to quantify treatment effectson beta-cell preservation, glycemic control, and insulin requirements whileexamining time-dependent efficacy and safety profiles.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41267047/",
+    "journal": "BMC endocrine disorders",
+    "publication_date": "2025-Nov-20",
+    "authors": [
+      "Shankar Biswas",
+      "Bhavya Dhir",
+      "Susmitha Talasila",
+      "Spurthy Namala",
+      "Ankush Kimmatkar",
+      "Neeharika Bhamidi",
+      "Sudharshan Raajkumar Ezhil",
+      "Ummul Barka Safa",
+      "I M Khalid Reza",
+      "Vamsi Priya Sribhashyam",
+      "Yashasvi Srivastava",
+      "Urvashi Bharia",
+      "Shaan Mohammad",
+      "Ashish Jaswal",
+      "Zain Ul Abedin",
+      "Vikash Kumar",
+      "Shivalika Singh",
+      "Raymond Haward"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41254515",
+    "title": "Induction of high numbers of T",
+    "content": "Psoriasis is a prevalent autoimmune skin disorder; however, the mechanism of its pathogenesis remains fully understood. The imbalance of regulatory T (T",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41254515/",
+    "journal": "BMC immunology",
+    "publication_date": "2025-Nov-18",
+    "authors": [
+      "Samar Salman",
+      "Sohaila M Khalil",
+      "Amany Mohammed Abdel-Latif",
+      "Yasmina Ahmed El Attar",
+      "Mohamed Labib Salem"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41107262",
+    "title": "\u03b1TIGIT-IL2 achieves tumor regression by promoting tumor-infiltrating regulatory T cell fragility in mouse models.",
+    "content": "Administration of IL-2 may promote the suppressive function and proliferation of T",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41107262/",
+    "journal": "Nature communications",
+    "publication_date": "2025-Oct-17",
+    "authors": [
+      "Tianci Wang",
+      "Yupu Xu",
+      "Zhengfeng Zhang",
+      "Yaqi Wu",
+      "Long Chen",
+      "Xiaodong Zheng",
+      "Hui Peng",
+      "Qiang Zou",
+      "Rui Sun",
+      "Hongdi Ma",
+      "Haoyu Sun",
+      "Zhigang Tian",
+      "Xiaohu Zheng"
+    ]
+  },
+  {
+    "source": "PubMed",
+    "id": "41053009",
+    "title": "LdIL-2 treatment in ASD: a novel immunotherapeutic approach targeting Th/Treg dysfunction and neuroinflammation.",
+    "content": "A significant proportion of children with Autism Spectrum Disorder (ASD) present with immune imbalances. In this study, we sought to alleviate the core symptoms of autism by addressing immune dysregulation, especially T-cell subpopulation imbalances, in BTBR mice through low-dose IL-2 (LdIL-2) treatment. LdIL-2 (30,000\u2009IU) was administered subcutaneously, and changes in autistic behaviors were observed before and after treatment. Behavioral assessments included the three-chamber test, self-grooming test, sniffing test, marble burying test, open field test and Y-maze test. We also examined alterations in peripheral Th/Treg ratios, cytokine levels, and M1/M2 microglia ratios in the central nervous system via flow cytometry. Neuroinflammatory proteins in cerebrospinal fluid were assessed using proteomic analysis. Furthermore, CD25",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41053009/",
+    "journal": "Translational psychiatry",
+    "publication_date": "2025-Oct-06",
+    "authors": [
+      "Meng Li",
+      "Xiuying Kui",
+      "Shujun Yang",
+      "Zuqing Nie",
+      "Huiling Chen",
+      "Penghao Yao",
+      "Xinyi Xu",
+      "Chen Shen",
+      "Zhiwei Li",
+      "Huijia Zhao",
+      "Jie Wen",
+      "Xinwei Huang",
+      "Jingrui Yang",
+      "Jinyuan Yan",
+      "Pengfei Wang",
+      "Bin Li",
+      "Xia Cao"
+    ]
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT02417870",
+    "title": "Safety and Efficacy of Treatment With Ultra-low Dose Subcutaneous IL-2 to Promote Regulatory T Cells Post Renal Transplantation",
+    "content": "To investigate the safety and tolerability of treatment with low dose rIL-2 in renal transplant recipients. To assess the immunologic impact of low dose rIL-2 in renal transplant recipients. To assess the efficacy of low dose rIL-2 in renal transplant recipients.",
+    "url": "https://clinicaltrials.gov/study/NCT02417870"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT02084238",
+    "title": "Safety and Efficiency Study of Low-dose IL-2 Treatment in Systemic Lupus Erythematosus",
+    "content": "This clinical study will test the efficacy and safety of low dose IL-2 treatment in Systemic lupus erythematosus.",
+    "url": "https://clinicaltrials.gov/study/NCT02084238"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT01862120",
+    "title": "Induction of Regulatory T Cells for the Treatment of Recently Diagnosed Type 1 Diabetes: Dose Finding Study of the Lowest Active Dose of IL-2 in Children",
+    "content": "Human recombinant interleukin-2 (rhIL-2) is a biological signalling protein playing a key role in the regulation of the immune system. At high doses, rhIL-2 activates the immune effectors T cells (TEFFS) while at low doses rhIL-2 induces and activates regulatory T cells (TREGS), a population of immune cells controlling the immune Teff response. In patients with Type 1 Diabetes (T1D), TREGS fail to control the autoimmune destruction by TEFFS of pancreatic beta-cells producing insulin. The investigator recently showed that rhIL-2 at low dose is well tolerated in patients with an autoimmune disease and in adults with established T1D, inducing TREGS without effects on TEFFS. The investigators aim to use rhIL-2 at low dose to induce/stimulate TREGS in young recently diagnosed T1D patients. This study will investigate the dose effect relationship of low dose rhIL-2 on TREG induction such as to optimize the risk benefit ratio of this treatment in T1D. Through Treg induction, the investigators aim to protect the remaining/regenerating pancreatic \u03b2-cells from autoimmune destruction, thus improving or even curing T1D.",
+    "url": "https://clinicaltrials.gov/study/NCT01862120"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "id": "NCT02714959",
+    "title": "Effect of IL-2 in Refractory Autoimmune Encephalitis Patients: A Pilot Study",
+    "content": "The purpose of this study is to determine whether low-dose IL-2 is effective in refractory autoimmune encephalitis.",
+    "url": "https://clinicaltrials.gov/study/NCT02714959"
+  }
+]
