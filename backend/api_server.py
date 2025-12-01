@@ -61,7 +61,7 @@ async def chat(request: QueryRequest):
     try:
         # Note: In a real implementation, we'd pass model_config to the agent
         # to dynamically switch models if supported by the BaseAgent logic.
-        result = agent.query(request.question, session_id=request.session_id)
+        result = await agent.query(request.question, session_id=request.session_id)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
