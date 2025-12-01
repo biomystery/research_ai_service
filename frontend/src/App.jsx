@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, BookOpen, FlaskConical, Sparkles, User, Bot, Settings } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 function App() {
     const [messages, setMessages] = useState([
@@ -38,7 +40,7 @@ function App() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     question: userMessage.content,
-                    model_config: model
+                    model_type: model
                 }),
             });
 
@@ -103,8 +105,8 @@ function App() {
                                 onChange={(e) => setModel(e.target.value)}
                                 className="w-full bg-slate-900 border border-slate-700 rounded p-1.5 text-xs text-slate-300 focus:border-bio-accent outline-none"
                             >
-                                <option value="pro">Gemini 1.5 Pro (Reasoning)</option>
-                                <option value="flash">Gemini 1.5 Flash (Speed)</option>
+                                <option value="pro">Gemini 2.0 Flash (Latest)</option>
+                                <option value="flash">Gemini 2.0 Flash (Latest)</option>
                             </select>
                         </div>
                     )}
@@ -138,7 +140,15 @@ function App() {
                                     ? 'bg-bio-accent/10 text-bio-accent border border-bio-accent/20 rounded-tr-none'
                                     : 'bg-bio-panel border border-slate-700 rounded-tl-none'
                                     }`}>
-                                    <p className="leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+                                    {msg.role === 'user' ? (
+                                        <p className="leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+                                    ) : (
+                                        <div className="prose prose-invert prose-sm max-w-none prose-pre:bg-slate-900 prose-pre:border prose-pre:border-slate-700 prose-code:text-bio-accent prose-a:text-bio-accent">
+                                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                                {msg.content}
+                                            </ReactMarkdown>
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Steps / Thoughts */}
